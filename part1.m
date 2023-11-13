@@ -1,3 +1,4 @@
+% Part 1a
 % Close any old plots
 close all
 
@@ -20,3 +21,5 @@ rays_out = Md*rays_in;
 ray_z = [zeros(1,size(rays_in,2)); d*ones(1,size(rays_in,2))];
 plot(ray_z, [rays_in(1,:); rays_out(1,:)]);
 
+% Part 1b
+a = 1;
