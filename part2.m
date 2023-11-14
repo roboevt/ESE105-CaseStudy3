@@ -24,9 +24,9 @@ load("lightField.mat")
 %     imshow(img);
 % end
 
-% Plot image
-% img = rays2img(rays(1,:), rays(3,:), .02, 500);
-% imshow(img);
+% Plot best image so far
+img = rays2img(rays(1,:), rays(3,:), .02, 500);
+imshow(img);
 
 % Question 2:
 % We have no optical system. Light coming from one point of an object will
@@ -34,7 +34,7 @@ load("lightField.mat")
 
 % Optical system design:
 
-% Used for focusing system
+% Used for focusing system (finding d1)
 % for d1=.3:.0015:.5 % Unknown distance from object to lens
 %     %d1 = .4;
 %     d2 = .8; % lens to sensor
@@ -87,3 +87,4 @@ imshow(img)
 figure
 img = rays2img(comic_rays_focused(1,:), comic_rays_focused(3,:), sensor_width, pixels);
 imshow(img)
+
