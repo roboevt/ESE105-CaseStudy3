@@ -14,6 +14,7 @@ title_size = 18;
 % end
 
 % Vary pixel count (part c)
+% figure;
 % for p=50:1000
 %     img = rays2img(rays(1,:), rays(3,:), .01, p);
 %     imshow(img);
@@ -63,9 +64,8 @@ title( "Raw Light Field", "FontSize", title_size)
 % end
 
 % Seperate image sources (imagine blocking part of the lens with a card)
-rays_lower_quarter = min(rays(1,:)) + range(rays(1,:))/4;
-rays_mid = min(rays(1,:)) + range(rays(1,:))/4;
-rays_upper_quarter = min(rays(1,:)) + range(rays(1,:))*3/4;
+rays_lower_quarter = min(rays(1,:)) + range(rays(1,:))/3;
+rays_upper_quarter = min(rays(1,:)) + range(rays(1,:))*2/3;
 
 right_rays = rays(:,rays(1,:) > rays_upper_quarter);
 left_rays  = rays(:,rays(1,:) < rays_lower_quarter);
