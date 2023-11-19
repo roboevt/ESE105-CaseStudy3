@@ -80,7 +80,7 @@ for d = [0 .1 1 10]
     rays2 = Md*rays; % Free space propagation
     img = rays2img(rays2(1,:), rays2(3,:), .01, 500); % Capture image
     subplot(2,2,i), imshow(img); %Plot
-    title("Distance: " + d) %Label
+    title("Distance: " + d, "FontSize",label_size) %Label
     i = i+1;
 end
 
