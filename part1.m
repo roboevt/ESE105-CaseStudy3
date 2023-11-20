@@ -21,6 +21,8 @@ rays_out1 = Md1*rays_in1;
 figure;
 ray_z1 = [zeros(1,size(rays_in1,2)); d1*ones(1,size(rays_in1,2))];
 plot(ray_z1, [rays_in1(1,:); rays_out1(1,:)]);
+xlabel("z(m)")
+ylabel("z(m)")
 title("Ray tracing through free space")
 % Part 1b
 f = 0.15; % Focal Length
@@ -61,4 +63,6 @@ rectangle('Position',[0.2 -0.02 0.005 0.04],'Curvature',1)
 hold off
 
 %Title
+xlabel("z(m)")
+ylabel("z(m)")
 title("Ray tracing through a finite-sized lens")
