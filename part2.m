@@ -169,9 +169,14 @@ sensor_width = 0.02; % (m)
 pixels = 500;
 
 % Display results
+all_rays_focused = Md2*Mf*rays;
+displayImage(all_rays_focused, sensor_width, pixels, "All Images", title_size)
+
+% 3 images
 displayImage(right_rays_focused, sensor_width, pixels, "Right Image", title_size);
 displayImage(left_rays_focused, sensor_width, pixels, "Left Image", title_size);
 displayImage(center_rays_focused, sensor_width, pixels, "Center Image", title_size);
+
 
 % Note: Source of center image: https://www.instagram.com/p/CxbBBNBy1FP/
 % AI generated image by DALLE3, "An illustration of an avocado sitting in a therapist's chair, saying 
